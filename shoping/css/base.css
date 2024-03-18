@@ -1,0 +1,44 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+em,i{ font-style: normal;
+
+}
+li{
+    list-style: none;
+
+}
+img{
+    border: 0;
+    vertical-align: middle;
+}
+button{
+    /* 当我们鼠标经过button 按钮的时候 鼠标变小手 */
+    cursor: pointer;
+}
+a{
+    color: #666;
+    text-decoration: none;
+    
+}
+a:hover{
+    color: #c81632;
+}
+button  ,input{
+ /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    border: 0px;
+    outline: none;
+}
+body{
+    background-color: #fff;
+    font: 12px/1.5 ;
+}
+
+.mod_help dl:last-child{
+    width: 90px;
+    text-align: center;
+}
+.links{margin: bottom 15px; ;}

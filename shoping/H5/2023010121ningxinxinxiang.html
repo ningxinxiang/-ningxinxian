@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    playGame();
+    // 测试代码
+const scores1 = [88, 92, 95, 87, 90];
+console.log(getGrade(scores1)); // 输出: "优秀"
+
+const scores2 = [75, 82, 78, 70, 66];
+console.log(getGrade(scores2)); // 输出: "及格"
+
+const scores3 = [54, 58, 62, 48, 50];
+console.log(getGrade(scores3)); // 输出: "不及格"
+function getGrade(scores) {
+  let sum = 0;
+  for (let i = 0; i < scores.length; i++) {
+    sum += scores[i];
+  }
+  const averageScore = sum / scores.length;
+
+  if (averageScore >= 90) {
+    return "优秀";
+  } else if (averageScore >= 80) {
+    return "良好";
+  } else if (averageScore >= 60) {
+    return "及格";
+  } else {
+    return "不及格";
+  }
+  return grade
+}
+
+
+    </script>
+
+
+
+</body>
+</html>

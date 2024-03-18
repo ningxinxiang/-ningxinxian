@@ -1,0 +1,144 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>第一行！</p>
+    <p>第二行！</p>
+    <p>第三行！</p>
+    <div class="DivContent">这是在div里面</div>
+    <script>
+          var newArray =[777,666,555,999,888];
+          console.log(newArray);                                                                                                                                          
+        newArray.reverse()
+        console.log(newArray);
+        newArray.sort();
+        console.log(newArray);
+        console.log(newArray.indexOf(666));
+        console.log(newArray.lastIndexOf(666));
+        console.log(Math.abs(-1));
+        console.log(Math.ceil(3.5));
+        console.log(Math.floor(8.9));
+        console.log(Math.round(5.55));
+        console.log(Math.max(1,2,4,5,6,7,43,45,4));
+        console.log(Math.min(23,5 ,6 ,6 ,54,3,2));
+        console.log(Math.PI);
+        console.log(Math.random());
+        </script>
+        <script>
+            var pTages = document.getElementsByTagName('p');
+            console.log(pTages);
+            var divContent = document.getElementById('divContent');
+        console.log(divContent);
+        </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加元素</title>
+</head>
+<body>
+    <style>
+        ul {list-style: none;}
+    </style>
+    <ul id="ul"></ul>
+    <script>
+var ul =document.getElementById('ul');
+var secondLi =document.createElement('li');
+secondLi.innerText ='这是第二个Li';
+ul.appendChild(secondLi);
+var firstLi =document.createElement('li');
+firstLi.innerText ='这是第一个LI';
+ul.insertBefore(firstLi,secondLi);
+
+    </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div{
+    width: 240px;
+    height: 50px;
+    background-color: red;
+
+}
+.div{
+    width: 330px;
+    height: 100px;background-color: blue;
+}
+    </style>
+</head>
+<body>
+ <div>这个div最终会显示成什么样子呢？</div>
+<div class="div">这个div最终会显示成什么样子呢？</div>   
+
+<script>
+    var div = document.getElementById('div');
+    div.className ='NewDiv';
+
+</script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="firstDiv"><strong>这是第一个Div!</strong></div>
+    <div class="secondDiv"><strong>这是第二个Div!</strong></div>
+<script>
+    var firstDiv=document.getElementById('firstDiv');
+    var secondDiv=document.getElementById('secondDiv');
+    var firstDivContent = firstDiv.innerText;
+    var secondDivContent= secondDiv.innerHTML;
+    console.log(firstDivContent);
+    console.log(secondDivContent);
+    firstDiv.innerText ='<i>这是第一个Div!</i>';
+    secondDiv.innerHTML= '<i>这是第二个Div!</i>';
+</script>
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">触发事件</button>
+    <input type="password" placeholder="你好世界">
+    <script>
+        var btn = document.getElementById('btn');
+        // btn.onclick =function (){
+        //     console.log('事件点击被触发！');
+        //     console.log('触发的第二个函数');
+        // }
+        // btn.onclick =function (){
+        //     console.log('事件点击未被触发！');
+        //     console.log('触发的三个函数');
+        // }
+        //这种方法有局限性，比如给同一个元素同一个事件赋值新的函数时会覆盖掉前面的函数，造成一写函数的丢失//
+        btn.addEventListener('click',function(){
+alert("HelloWorld");
+console.log('HelloWorld');
+        })
+    </script>
+</body>
+</html>

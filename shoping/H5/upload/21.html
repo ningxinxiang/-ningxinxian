@@ -1,0 +1,156 @@
+<!-- <!DOCTYPE html> <html> <head> <title>游戏和成绩等级判断</title> 
+</head> <body> <script>   function checkUsernameAndPassword() { var username = ""; var password = ""; 
+while (username !== "admin" || password !== "888") { username = prompt("请输入用户名：");
+ password = prompt("请输入密码："); } }
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        function checkUsernameAndPassword() { var username = ""; var password = ""; 
+while (username !== "admin" || password !== "888") { username = prompt("请输入用户名：");
+ password = prompt("请输入密码："); } }
+    </script>
+ </body>
+ </html>  -->
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <input type="submit" value="提交" id="sm">
+  </form>
+
+  <script>
+    document.getElementById("sm").onclick = function() {
+      event.preventDefault(); // 阻止表单默认提交行为
+
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username !== "admin" || password !== "888") {
+        alert("用户名或密码不正确，请重新输入！");
+      } else {
+        alert("登录成功！");
+        // document.getElementById("loginForm").reset(); // 清空表单
+        // 可以在此处添加其他逻辑，如跳转到其他页面
+      }
+    }; 
+  </script>
+</body> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <input type="text" value="" placeholder="请输入用户名："><br>
+<input type="password" value="" placeholder="请输入密码："><br>
+<input type="button" value="登入"id=btn><br>
+
+ 
+</head>
+<body>
+    <script>
+document.getElementById("btn").onclick = function(){
+    var inputs =document.getElementsByTagName("input");
+      if (inputs[0].value=="admin"&& inputs[1].value=="888") {
+        alert("登入成功·");
+      } else {
+        alert("账号密码错误！");
+}
+}
+
+function playGame() {
+  const targetNumber = Math.floor(Math.random() * 10); // 生成一个 0 到 9 之间的随机数
+  let attempts = 3; // 剩余的猜测次数
+
+  while (attempts > 0) {
+    const guess = parseInt(prompt("请输入一个数字（0 到 9）:"));
+
+    if (isNaN(guess) || guess < 0 || guess > 9) {
+      alert("请输入有效的数字！");
+      continue;
+    }
+
+    if (guess === targetNumber) {
+      alert("恭喜你，猜对了！你赢得了游戏。");
+      return; // 猜对了，直接跳出游戏
+    } else {
+      attempts--;
+      if (attempts > 0) {
+        alert(`猜错了！你还有 ${attempts} 次机会。`);
+      } else {
+        alert(`很遗憾，你没有猜对。正确答案是 ${targetNumber}。游戏结束。`);
+      }
+    }
+  }
+}
+
+playGame();
+function getGrade(scores) {
+  let sum = 0;
+  for (let i = 0; i < scores.length; i++) {
+    sum += scores[i];
+  }
+  const averageScore = sum / scores.length;
+
+  if (averageScore >= 90) {
+    return "优秀";
+  } else if (averageScore >= 80) {
+    return "良好";
+  } else if (averageScore >= 60) {
+    return "及格";
+  } else {
+    return "不及格";
+  }
+  return grade
+}
+function getGrade(scores) {
+  let sum = 0;
+  for (let i = 0; i < scores.length; i++) {
+    sum += scores[i];
+  }
+  const averageScore = sum / scores.length;
+
+  let grade = '';
+  if (averageScore >= 90) {
+    grade = '优秀';
+  } else if (averageScore >= 80) {
+    grade = '良好';
+  } else if (averageScore >= 60) {
+    grade = '及格';
+  } else {
+    grade = '不及格';
+  }
+
+  return grade;
+}
+
+// 测试代码
+const scores1 = [88, 92, 95, 87, 90];
+console.log(getGrade(scores1)); // 输出: "优秀"
+
+const scores2 = [75, 82, 78, 70, 66];
+console.log(getGrade(scores2)); // 输出: "及格"
+
+const scores3 = [54, 58, 62, 48, 50];
+console.log(getGrade(scores3)); // 输出: "不及格"
+    </script>
+</body>
+</html>
+
+
